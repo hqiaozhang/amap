@@ -1,0 +1,27 @@
+.back_panel {
+  width: 100%;
+  background: #f7f7f7;
+  height: 88px;
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
+  .arrow {
+    width: 200px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    .left,
+    .right {
+      background: url("./images/back.png") no-repeat;
+      background-size: 100% 100%;
+      width: 64px;
+      height: 64px;
+      margin-top: 12px;
+      float: left;
+    }
+    .right {
+      transform: rotate(-180deg);
+      float: right;
+    }
+  }
+}

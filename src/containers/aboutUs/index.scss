@@ -1,0 +1,23 @@
+.aitectcare-aboutUs {
+  width: 100%;
+  padding: 0 80px;
+  color: #ebebeb;
+  font-size: 28px;
+  line-height: 44px;
+  animation: opacityY 0.5s linear;
+  margin-bottom: 34px;
+  p {
+    padding-top: 58px;
+    text-indent: 64px;
+  }
+}
+@keyframes opacityY {
+  0% {
+    opacity: 0.5;
+    transform: translateY(10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

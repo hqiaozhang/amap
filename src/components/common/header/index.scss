@@ -1,0 +1,111 @@
+.header-layout {
+  height: 100px;
+  background: rgba(0, 0, 0, 0.3);
+  width: 750px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  
+  .left-logo {
+    width: 180px;
+    height: 100%;
+    background: url("./images/logo.png") no-repeat;
+    background-size: 100% 100%;
+    float: left;
+  }
+  .menus-icon {
+    background: url("./images/menu.png") no-repeat;
+    background-size: 100% 100%;
+    float: right;
+    width: 114px;
+    height: 100%;
+    cursor:pointer;
+    -webkit-tap-highlight-color:transparent;
+    border: none;
+  }
+  .menus-list {
+    float: right;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+    padding-top: 100px;
+    transition: all .1s;
+    height: 100vh;
+    overflow: auto;
+    .logo {
+      background: url("./images/logo2.png") no-repeat;
+      background-size: 100% 100%;
+      width: 266px;
+      height: 134px;
+      display: inline-block;
+      margin-bottom: 50px;
+    }
+    .close-btn {
+      position: fixed;
+      right: 0;
+      top: 0;
+      background: url("./images/close.png") no-repeat;
+      background-size: 100% 100%;
+      width: 114px;
+      height: 100px;
+    }
+    div {
+      margin: 34px 0;
+      float: left;
+      width: 100%;
+    }
+    li {
+      ul {
+        font-size: 28px;
+        border-top: 1px solid #424242; /*no*/
+        border-bottom: 1px solid #424242; /*no*/
+        margin-top: 44px;
+        margin-bottom: -24px;
+        animation: opacityHeader 0.2s linear;
+        padding: 22px 0;
+        float: left;
+        width: 100%;
+        li {
+          margin: 22px 0;
+          line-height: 28px;
+          float: left;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@keyframes opacityHeader {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacity1 {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.fade-enter-active, .fade-leave-active {
+  animation: opacityHeader 0.3s linear;
+}
+
+/*fade-leave-to 用于低于 2.1.8 版本*/
+.fade-enter, .fade-leave-to {
+  animation: opacity1 0.3s linear;
+  /*0 表示完全透明*/
+}

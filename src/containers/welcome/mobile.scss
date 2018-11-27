@@ -1,0 +1,213 @@
+// 移动端css
+.aitectcare_welcome{
+	width: 100%;
+	overflow: hidden;
+	height: 100vh;
+	#double_container{
+		position: relative;
+	}
+	.move_container{
+		width: 1884px;
+		height: 508px;
+		background: url(./images/yuezizhongxin.png) no-repeat center center;
+		background-size: cover;
+		margin-top: 150px;
+		/* animation:move 10s 3s linear alternate infinite; */
+		position: relative;
+		left: 0;
+		font-size: 26px;
+		color: #fff;
+		z-index: 10;
+		float: left;
+		div{
+			opacity: 0;
+			position: absolute;
+		}
+		.school_icon{
+			width: 75px;
+			height: 177px;
+			background: url(./images/xuexiao@2x.png) no-repeat center center;
+			background-size: cover;
+			left: 186px;
+			top: 76px;
+			animation:show 1s linear forwards;
+		}
+		.ob_icon{
+			width: 75px;
+			height: 302px;
+			background: url(./images/xiezilou@2x.png) no-repeat center center;
+			background-size: cover;
+			left: 336px;
+			top: -150px;
+			animation:show 1s 1s linear forwards;
+		}
+		.home_icon{
+			width: 75px;
+			height: 308px;
+			background: url(./images/jia@2x.png) no-repeat center center;
+			background-size: cover;
+			left: 596px;
+			top: -50px;
+			animation:show 1s 2s linear forwards;
+		}
+		.school_text{
+			left: 200px;
+			bottom: 110px;
+			animation:show 1s linear forwards;
+		}
+		.ob_text{
+			left: 340px;
+			bottom: 110px;
+			animation:show 1s 1s linear forwards;
+		}
+		.home_text{
+			left: 620px;
+			bottom: 110px;
+			animation:show 1s 2s linear forwards;
+		}
+		.yy_text{
+			opacity: 1;
+			left: 850px;
+			bottom: 110px;
+		}
+		.yly_text{
+			opacity: 1;
+			left: 1120px;
+			bottom: 110px;
+		}
+		.sc_text{
+			opacity: 1;
+			left: 1380px;
+			bottom: 110px;
+		}
+		.yzzx_text{
+			opacity: 1;
+			left: 1560px;
+			bottom: 110px;
+		}
+		.jd_text{
+			opacity: 1;
+			left: 1770px;
+			bottom: 110px;
+		}
+	}
+	.xingxing_icon{
+		width: 78px;
+		height: 78px;
+		background: url(./images/xx@2x.png) no-repeat center center;
+		background-size: cover;
+		position: absolute;
+		top: 100px;
+		left: 80%;
+		z-index: 1;
+		animation: zoom 1s ease-in-out alternate infinite;
+	}
+	.xingxing_icon2 {
+		left: 15%;
+		top: 120px;
+		transform: scale(0.8);
+		animation: zoom2 2s ease-in-out 2s alternate infinite;
+	}
+	.xingxing_icon3 {
+		left: 50%;
+		top: 190px;
+		animation:zoom2 3s linear 3s alternate infinite;
+		transform: scale(0.6);
+	}
+	.guangxiao{
+		width: 750px;
+		height: 190px;
+		background: url(./images/gx@2x.png) no-repeat center center;
+		background-size: cover;
+		position: absolute;
+		top: 480px;
+		z-index: 1;
+	}
+	.bottom_cantainer{
+		position: absolute;
+		z-index: 11;
+		bottom: 100px;
+		width: 750px;
+		text-align: center;
+		.title{
+			font-size: 36px;
+			color: #ebebeb;
+			font-weight: bold;
+			width: 100%;
+
+		}
+		.sub_title{
+			font-size: 24px;
+			color: #ebebeb;
+			padding: 24px 0;
+			width: 100%;
+			&::before {
+				content: "";
+				background: url("./images/text.png") no-repeat;
+				background-size: 100%;
+				display: inline-block;
+				width: 83px;
+				height: 16px;
+			}
+		}
+		.login_btn{
+			width: 600px;
+			height: 184px;
+			border: none;
+			background: url(./images/login_button@2x.png) no-repeat center center;
+			background-size: cover;
+			font-size: 36px;
+			color: #fff;
+		}
+	}
+}
+@media screen and (max-height: 550px) {
+	.aitectcare_welcome{
+	    .move_container{
+	    	margin-top: 70px;
+	    }
+	    .guangxiao{
+	    	top: 400px;
+	    }
+	    .bottom_cantainer{
+	    	bottom: 30px;
+	    }
+	}
+}
+@keyframes move{
+	0%{
+		left: 0; 
+	}
+	100%{
+		left: calc(-1884px + 100vw);
+	}
+}
+@keyframes show{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+@keyframes zoom{
+	0%{
+		transform: scale(1);
+		opacity: 0.8;
+	}
+	100%{
+		transform: scale(1.5);
+		opacity: 1;
+	}
+}
+
+@keyframes zoom2{
+	0%{
+		transform: scale(0.6);
+		opacity: 0;
+	}
+	100%{
+		transform: scale(1.1);
+		opacity: 1;
+	}
+}
